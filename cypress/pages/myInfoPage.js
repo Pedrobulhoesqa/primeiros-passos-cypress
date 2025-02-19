@@ -7,7 +7,7 @@ class MyInfoPage {
             firstNameField: '[name="firstName"]',
             middleNameField: '[name="middleName"]',
             lastNameField: "[name='lastName']",
-            genericField: ".oxd-input--active",
+            genericField: ".oxd-input",
             dateField: '[placeholder="yyyy-dd-mm"]',
             dateCloseButton: '.--close',
             genericDropdonwField: '.oxd-select-text--active',
@@ -28,14 +28,11 @@ class MyInfoPage {
         cy.get(this.selectorsList().middleNameField).clear().type("Bulhoes")
         cy.get(this.selectorsList().lastNameField).clear().type("Dias")
         //cy.get(this.selectorsList().genericField).eq(3).clear().type("nicknametest")
-        cy.get(this.selectorsList().genericField).eq(3).clear().type("employee-1")
-        cy.get(this.selectorsList().genericField).eq(4).clear().type("otherIdTest")
-        cy.get(this.selectorsList().genericField).eq(5).clear().type("driverlicenseTest")
-        cy.get(this.selectorsList().genericField).eq(7).click()
-        cy.get(this.selectorsList().calendarYearSelector).click()
-        cy.get(this.selectorsList().calendarDropdonwList).eq(55).click({force: true})
-        cy.get(this.selectorsList().dateCloseButton).click({force: true}).wait(500)
-        cy.get(this.selectorsList().genericField).eq(8).clear().type('01234test')
+        cy.get(this.selectorsList().genericField).eq(4).clear().type("employee-1")
+        cy.get(this.selectorsList().genericField).eq(5).clear().type("otherIdTest")
+        cy.get(this.selectorsList().genericField).eq(6).clear().type("driverlicenseTest")
+        cy.get(this.selectorsList().genericField).eq(7).clear().click().type("2025-03-10")
+        cy.get(this.selectorsList().genericField).eq(8).clear().click().type("1995-07-11")
         //cy.get(this.selectorsList().genericField).eq(9).clear().type('ssitest')
         cy.get(this.selectorsList().genericDropdonwField).eq(0).click()
         cy.get(this.selectorsList().genericDropdownList).eq(0).click().wait(500)
