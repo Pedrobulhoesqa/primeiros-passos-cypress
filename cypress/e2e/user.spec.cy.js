@@ -20,7 +20,10 @@ describe('Orange HRM Tests', () => {
     loginPage.loginWithUser(userData.userSuccess.username, userData.userSuccess.password)
     dashboardPage.checkDashboardPage()
     menuPage.accessMyInfoPage()
-    myInfoPage.completeMyInfo()
+    myInfoPage.fillPersonalDetails('Pedro', 'Rodrigues', 'Bulhoes', 'NicknameTest')
+    myInfoPage.fillEmployeeDetails('employeeId','otherId','driverLicense','2025-5-20','123456', '654321')
+    myInfoPage.fillStatus('1995-11-07')
+    myInfoPage.saveForm()
   })
 
   it('Login - Fail', () => {
