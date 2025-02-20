@@ -50,6 +50,12 @@ class MyInfoPage {
         cy.get(this.selectorsList().smokerCheckbox).eq(0).click()
     }
 
+    fillCustomField(testField){
+        cy.get(this.selectorsList().genericDropdonwField).eq(2).click()
+        cy.get(this.selectorsList().genericDropdownList).eq(3).click()
+        cy.get(this.selectorsList().genericField).eq(9).clear().type(testField)
+    }
+
     saveForm(){
         cy.get(this.selectorsList().submitButton).eq(0).click()
         //cy.get("body").should("contain", "Successfully Updated")

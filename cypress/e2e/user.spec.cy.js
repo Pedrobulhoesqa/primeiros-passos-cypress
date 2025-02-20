@@ -22,7 +22,8 @@ describe('Orange HRM Tests', () => {
     menuPage.accessMyInfoPage()
     myInfoPage.fillPersonalDetails('Pedro', 'Rodrigues', 'Bulhoes', 'NicknameTest')
     myInfoPage.fillEmployeeDetails('employeeId','otherId','driverLicense','2025-5-20','123456', '654321')
-    myInfoPage.fillStatus('1995-11-07')
+    myInfoPage.fillStatus('1995-07-11')
+    myInfoPage.fillCustomField('test123')
     myInfoPage.saveForm()
   })
 
