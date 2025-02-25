@@ -14,6 +14,7 @@ class MyInfoPage {
             genericDropdownList: ".oxd-select-option",
             calendarYearSelector: '.oxd-calendar-selector-year-selected',
             calendarDropdonwList: '.oxd-calendar-dropdown--option',
+            genderoption: '.oxd-radio-wrapper',
             smokerCheckbox: '.oxd-checkbox-input',
             toastCloseButton: '.oxd-toast-close',
             submitButton: "[type='submit']",
@@ -39,7 +40,6 @@ class MyInfoPage {
     }
 
     fillStatus(birthDate){
-        cy.get(this.selectorsList().genericField).eq(8).clear().click().type(birthDate)
         cy.get(this.selectorsList().genericDropdonwField).eq(0).click()
         cy.get(this.selectorsList().genericDropdownList).eq(0).click().wait(500)
         cy.get(this.selectorsList().genericDropdonwField).eq(0).click()
@@ -48,6 +48,9 @@ class MyInfoPage {
         cy.get(this.selectorsList().genericDropdownList).eq(2).click()
         //cy.get(this.selectorsList().genericField).eq(12).clear().type('militaryTest')
         cy.get(this.selectorsList().smokerCheckbox).eq(0).click()
+        cy.get(this.selectorsList().genericField).eq(8).clear().click().type(birthDate)
+        cy.get(this.selectorsList().genderoption).eq(0).click()
+
     }
 
     fillCustomField(testField){
